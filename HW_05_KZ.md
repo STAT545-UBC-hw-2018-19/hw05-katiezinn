@@ -12,6 +12,9 @@ Katie's 5th homework assignment: Factor and figure management
 -   [Part 3: Visualizing design](#part-3-visualizing-design)
     -   [Show, and recreate a figure from my first homework assignment with an explanation of why it is better.](#show-and-recreate-a-figure-from-my-first-homework-assignment-with-an-explanation-of-why-it-is-better.)
     -   [Recreate this figure using plotly, and expalin the benefits of using plotly.](#recreate-this-figure-using-plotly-and-expalin-the-benefits-of-using-plotly.)
+-   [Part 4: Writing figures to file](#part-4-writing-figures-to-file)
+    -   [saving the plot (default 7x7")](#saving-the-plot-default-7x7)
+-   [But I want to do more!](#but-i-want-to-do-more)
 
 Welcome to my 5th homework assignment. This assignment has 4 parts and is about factor and figure management.
 
@@ -623,7 +626,7 @@ ggplot(gapminder, aes(continent, lifeExp)) +
 
 Wow... that's hard to look at after the course :smile: I guess it isn't **THAT** bad but it can definitely use some work.
 
-I will recreate this figure with some updates -x and y axis labels changes -figure title -colour scheme -simple theme
+I will recreate this figure with some updates: 1) x and y axis labels changes 2) figure title 3) colour scheme 4) simple theme
 
 ``` r
 ggplot(gapminder, aes(continent, lifeExp, colour=lifeExp)) +
@@ -643,7 +646,7 @@ Recreate this figure using plotly, and expalin the benefits of using plotly.
 For this part i'm going to use my data from the **gap\_eur\_2007\_reorder** data frame (used in part 1) because I find it more interesting. I will make a simple figure here so you can see what it looks like before converting it to plotly:
 
 ``` r
-Plot_normal <- ggplot(gap_eur_2007_reorder, aes(lifeExp, country, colour=country)) + geom_point() +
+Plot_normal <- ggplot(gap_eur_2007_reorder, aes(country, lifeExp, colour=country)) + geom_point() +
   geom_smooth(method = loess) +
   theme_classic() +
    ggtitle("Life expectancy by European country in 2007") +
@@ -654,10 +657,22 @@ Plot_normal <- ggplot(gap_eur_2007_reorder, aes(lifeExp, country, colour=country
 
 Now, I will convert this figure to plotly.
 
-``` r
-#make plotly figure from the figure above
-Plot_plotly <- ggplotly(Plot_normal)
+Part 4: Writing figures to file
+===============================
 
-#save plotly figure as html so we can view it
-htmlwidgets::saveWidget(Plot_plotly, file = "KZ_plotly_figure.html")
+For this part I will use *ggsave()* to save Plot\_normal to a file. then I will use *! \[Alt text\] (/path/to/img.png)* to load and embed it in my report.
+
+saving the plot (default 7x7")
+------------------------------
+
+``` r
+#also specifying the scale of the figure
+ggsave(filename = "KZ_Plot_normal.png", Plot_normal) 
 ```
+
+    ## Saving 7 x 5 in image
+
+But I want to do more!
+======================
+
+Wait... do I?? Let's see how long this takes first.
