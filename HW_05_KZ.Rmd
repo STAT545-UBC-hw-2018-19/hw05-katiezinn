@@ -229,7 +229,7 @@ ggplot(gapminder, aes(continent, lifeExp, colour=lifeExp)) +
    ggtitle("Life expectancy by continent") +
     xlab("Continent") +
     ylab("Life expectancy") +
-    theme(legend.position = "none")
+    theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ```
 
 ## Recreate this figure using plotly, and expalin the benefits of using plotly.
@@ -237,7 +237,7 @@ ggplot(gapminder, aes(continent, lifeExp, colour=lifeExp)) +
 For this part i'm going to use my data from the **gap_eur_2007_reorder** data frame (used in part 1) because I find it more interesting. I will make a simple figure here so you can see what it looks like before converting it to plotly:
 
 ```{r}
-Plot_normal <- ggplot(gap_eur_2007_reorder, aes(country, lifeExp, colour=country)) + geom_point() +
+Plot_normal <- ggplot(gap_eur_2007_reorder, aes(lifeExp, country, colour=country)) + geom_point() +
   geom_smooth(method = loess) +
   theme_classic() +
    ggtitle("Life expectancy by European country in 2007") +
@@ -245,12 +245,15 @@ Plot_normal <- ggplot(gap_eur_2007_reorder, aes(country, lifeExp, colour=country
     ylab("Life expectancy") +
     theme(legend.position = "none")
 
+Plot_normal
 ```
 
 Now, I will convert this figure to plotly.
-
-
-
+ 
+```{r}
+# need to finish this
+```
+ 
 
 # Part 4: Writing figures to file
 
@@ -258,16 +261,13 @@ For this part I will use *ggsave()* to save Plot_normal to a file. then I will u
 
 ## saving the plot (default 7x7")
 ```{r}
-#also specifying the scale of the figure
-ggsave(filename = "KZ_Plot_normal.png", Plot_normal) 
+#also specifying the scale and dpi of the figure
+ggsave(filename = "KZ_Plot_normal.png", Plot_normal, dpi = 100, scale = 1.5) 
 ```
 
+![Figure](KZ_Plot_normal.png)
 
-```{r}
-
-```
  
-
 # But I want to do more!
 
 Wait... do I?? Let's see how long this takes first. 

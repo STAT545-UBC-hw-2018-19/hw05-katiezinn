@@ -646,16 +646,24 @@ Recreate this figure using plotly, and expalin the benefits of using plotly.
 For this part i'm going to use my data from the **gap\_eur\_2007\_reorder** data frame (used in part 1) because I find it more interesting. I will make a simple figure here so you can see what it looks like before converting it to plotly:
 
 ``` r
-Plot_normal <- ggplot(gap_eur_2007_reorder, aes(country, lifeExp, colour=country)) + geom_point() +
+Plot_normal <- ggplot(gap_eur_2007_reorder, aes(lifeExp, country, colour=country)) + geom_point() +
   geom_smooth(method = loess) +
   theme_classic() +
    ggtitle("Life expectancy by European country in 2007") +
     xlab("Country") +
     ylab("Life expectancy") +
     theme(legend.position = "none")
+
+Plot_normal
 ```
 
+![](HW_05_KZ_files/figure-markdown_github/unnamed-chunk-19-1.png)
+
 Now, I will convert this figure to plotly.
+
+``` r
+# need to finish this
+```
 
 Part 4: Writing figures to file
 ===============================
@@ -666,11 +674,13 @@ saving the plot (default 7x7")
 ------------------------------
 
 ``` r
-#also specifying the scale of the figure
-ggsave(filename = "KZ_Plot_normal.png", Plot_normal) 
+#also specifying the scale and dpi of the figure
+ggsave(filename = "KZ_Plot_normal.png", Plot_normal, dpi = 100, scale = 1.5) 
 ```
 
-    ## Saving 7 x 5 in image
+    ## Saving 10.5 x 7.5 in image
+
+![Figure](KZ_Plot_normal.png)
 
 But I want to do more!
 ======================
