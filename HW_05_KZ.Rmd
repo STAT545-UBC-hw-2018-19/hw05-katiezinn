@@ -1,7 +1,7 @@
 ---
 title: "Katie's 5th homework assignment: Factor and figure management"
 output: 
-    html_document:
+    github_document:
         toc: yes
 ---
 
@@ -251,8 +251,7 @@ Plot_normal
 Now, I will convert this figure to plotly. One of the biggest benefits of plotly is that you can put your curser over any point and see what the value is. This is especially useful when there is many y-valyes like there is in my figure. It can also zoom in and out, download the plot as .png, and show statistical summaries. 
 
 ```{r}
-#creating plotly 
-ggplotly(Plot_normal)
+#can't knit as a github document with my plotly code -- please see the html version for plotly
 ```
 
  

@@ -14,7 +14,6 @@ Katie's 5th homework assignment: Factor and figure management
     -   [Recreate this figure using plotly, and expalin the benefits of using plotly.](#recreate-this-figure-using-plotly-and-expalin-the-benefits-of-using-plotly.)
 -   [Part 4: Writing figures to file](#part-4-writing-figures-to-file)
     -   [saving the plot (default 7x7")](#saving-the-plot-default-7x7)
--   [But I want to do more!](#but-i-want-to-do-more)
 
 Welcome to my 5th homework assignment. This assignment has 4 parts and is about factor and figure management.
 
@@ -145,7 +144,7 @@ We have officially dropped Asia from the **gapminder** dataset, wahoo!
 Reorder the levels of country
 -----------------------------
 
-Next, I will reorder the levels of country by life expectancy for 2007. I will do this for the Americas to make the data set simple. Currently, they are no ordered alphabetically.
+Next, I will reorder the levels of country by life expectancy for 2007. I will do this for the Europe to make the data set simple. Currently, they are no ordered alphabetically.
 
 ``` r
 #filtering for the continent Oceania
@@ -274,7 +273,7 @@ Before writing:
 
 ``` r
 head(gap_Asia_2000_pop) %>%
-   knitr::kable(align = "c", caption = "Table before writing the file")
+   knitr::kable(caption = "Table before writing the file")
 ```
 
 <table>
@@ -283,144 +282,144 @@ Table before writing the file
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;">
+<th style="text-align:left;">
 country
 </th>
-<th style="text-align:center;">
+<th style="text-align:left;">
 continent
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 year
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 lifeExp
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 pop
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 gdpPercap
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Bahrain
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 75.635
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 708573
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 29796.048
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Kuwait
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 77.588
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2505559
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 47306.990
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Mongolia
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 66.803
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2874127
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3095.772
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Oman
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 75.640
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3204897
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 22316.193
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Lebanon
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 71.993
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3921278
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 10461.059
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 West Bank and Gaza
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 73.422
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 4018332
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3025.350
 </td>
 </tr>
@@ -430,7 +429,7 @@ Reading the file:
 
 ``` r
 head(gap_Asia_2000_pop_READ) %>%
-   knitr::kable(align = "c", caption = "Table from reading the written file")
+   knitr::kable(caption = "Table from reading the written file")
 ```
 
 <table>
@@ -439,165 +438,165 @@ Table from reading the written file
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;">
+<th style="text-align:right;">
 X
 </th>
-<th style="text-align:center;">
+<th style="text-align:left;">
 country
 </th>
-<th style="text-align:center;">
+<th style="text-align:left;">
 continent
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 year
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 lifeExp
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 pop
 </th>
-<th style="text-align:center;">
+<th style="text-align:right;">
 gdpPercap
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:right;">
 1
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Bahrain
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 75.635
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 708573
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 29796.048
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Kuwait
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 77.588
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2505559
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 47306.990
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Mongolia
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 66.803
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2874127
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3095.772
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:right;">
 4
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Oman
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 75.640
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3204897
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 22316.193
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:right;">
 5
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Lebanon
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 71.993
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3921278
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 10461.059
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:right;">
 6
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 West Bank and Gaza
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
 Asia
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 2007
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 73.422
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 4018332
 </td>
-<td style="text-align:center;">
+<td style="text-align:right;">
 3025.350
 </td>
 </tr>
@@ -635,7 +634,7 @@ ggplot(gapminder, aes(continent, lifeExp, colour=lifeExp)) +
    ggtitle("Life expectancy by continent") +
     xlab("Continent") +
     ylab("Life expectancy") +
-    theme(legend.position = "none")
+    theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ```
 
 ![](HW_05_KZ_files/figure-markdown_github/unnamed-chunk-18-1.png)
@@ -659,10 +658,10 @@ Plot_normal
 
 ![](HW_05_KZ_files/figure-markdown_github/unnamed-chunk-19-1.png)
 
-Now, I will convert this figure to plotly.
+Now, I will convert this figure to plotly. One of the biggest benefits of plotly is that you can put your curser over any point and see what the value is. This is especially useful when there is many y-valyes like there is in my figure. It can also zoom in and out, download the plot as .png, and show statistical summaries.
 
 ``` r
-# need to finish this
+#can't knit as a github document with my plotly code -- please see the html version for plotly
 ```
 
 Part 4: Writing figures to file
@@ -681,8 +680,3 @@ ggsave(filename = "KZ_Plot_normal.png", Plot_normal, dpi = 100, scale = 1.5)
     ## Saving 10.5 x 7.5 in image
 
 ![Figure](KZ_Plot_normal.png)
-
-But I want to do more!
-======================
-
-Wait... do I?? Let's see how long this takes first.
