@@ -3,7 +3,4 @@ hw05-katiezinn created by GitHub Classroom
 
 Welcome to my 5th homework assignment!
 
-In this assignment I will __ and ___ and blahhhahahah!!
-
-
-[here](https://www.google.ca) 
+You can find my assignment (.md) [here](https://github.com/STAT545-UBC-students/hw05-katiezinn/blob/master/HW_05_KZ.md) 
