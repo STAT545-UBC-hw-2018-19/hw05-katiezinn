@@ -94,7 +94,7 @@ We have officially dropped Asia from the **gapminder** dataset, wahoo!
 
 ## Reorder the levels of country
 
-Next, I will reorder the levels of country by life expectancy for 2007. I will do this for the Americas to make the data set simple. Currently, they are no ordered alphabetically.
+Next, I will reorder the levels of country by life expectancy for 2007. I will do this for the Europe to make the data set simple. Currently, they are no ordered alphabetically.
 
 ```{r}
 #filtering for the continent Oceania
@@ -187,13 +187,13 @@ Let's see if **gap_Asia_2000_pop** can keep it's integrity during the reading an
 Before writing:
 ```{r}
 head(gap_Asia_2000_pop) %>%
-   knitr::kable(align = "c", caption = "Table before writing the file")
+   knitr::kable(caption = "Table before writing the file")
 ```
 
 Reading the file:
 ```{r}
 head(gap_Asia_2000_pop_READ) %>%
-   knitr::kable(align = "c", caption = "Table from reading the written file")
+   knitr::kable(caption = "Table from reading the written file")
 ```
 
 It looks like the data frame survived the reading and writing process. It did not default to being ordered alphabetically, it retained it's ordering by population.
@@ -268,8 +268,4 @@ ggsave(filename = "KZ_Plot_normal.png", Plot_normal, dpi = 100, scale = 1.5)
 
 ![Figure](KZ_Plot_normal.png)
 
- 
-# But I want to do more!
-
-Wait... do I?? Let's see how long this takes first. 
 
