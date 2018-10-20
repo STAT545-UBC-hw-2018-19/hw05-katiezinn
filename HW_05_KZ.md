@@ -661,8 +661,17 @@ Plot_normal
 Now, I will convert this figure to plotly. One of the biggest benefits of plotly is that you can put your curser over any point and see what the value is. This is especially useful when there is many y-valyes like there is in my figure. It can also zoom in and out, download the plot as .png, and show statistical summaries.
 
 ``` r
-#can't knit as a github document with my plotly code -- please see the html version for plotly
+#creating my plotly graph online so it is accessible 
+api_create(Plot_normal, filename = "KZ_Plot_Normal_Plotly", sharing = "public")
 ```
+
+    ## Found a grid already named: 'KZ_Plot_Normal_Plotly Grid'. Since fileopt='overwrite', I'll try to update it
+
+    ## Found a plot already named: 'KZ_Plot_Normal_Plotly'. Since fileopt='overwrite', I'll try to update it
+
+<iframe src="https://plot.ly/~katiezinn/1.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0">
+</iframe>
+I created my plotly figure using the command **ggplotly(plot\_normal)** I can't keep this document rendered for github (rather than html) if I include it in the code so know that I ran that code... and a link to my plotly figure can be found [here](https://plot.ly/~katiezinn/1/#/)
 
 Part 4: Writing figures to file
 ===============================
