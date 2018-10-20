@@ -248,13 +248,14 @@ Plot_normal <- ggplot(gap_eur_2007_reorder, aes(lifeExp, country, colour=country
 Plot_normal
 ```
 
-Now, I will convert this figure to plotly.
- 
-```{r}
-# need to finish this
-```
- 
+Now, I will convert this figure to plotly. One of the biggest benefits of plotly is that you can put your curser over any point and see what the value is. This is especially useful when there is many y-valyes like there is in my figure. It can also zoom in and out, download the plot as .png, and show statistical summaries. 
 
+```{r}
+#creating plotly 
+ggplotly(Plot_normal)
+```
+
+ 
 # Part 4: Writing figures to file
 
 For this part I will use *ggsave()* to save Plot_normal to a file. then I will use _! [Alt text] (/path/to/img.png)_ to load and embed it in my report. 
